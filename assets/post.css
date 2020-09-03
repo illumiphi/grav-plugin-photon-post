@@ -1,6 +1,12 @@
 @charset "UTF-8";
 /* photon ✴ post Components and Templates */
 /* articles/post *****************************/
+article.posts.showcase {
+  grid-template-areas: " header header " " content collection ";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+}
+
 /* templates/post *****************************/
 
 /*# sourceMappingURL=post.css.map */

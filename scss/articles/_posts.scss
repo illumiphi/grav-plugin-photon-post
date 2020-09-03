@@ -2,7 +2,12 @@
 // start with a single column grid
 // top children have named grid areas
 
-article.post {
-
-
+article.posts {
+  &.showcase {
+    grid-template-areas: 
+      " header header " 
+      " content collection ";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+  }
 }
