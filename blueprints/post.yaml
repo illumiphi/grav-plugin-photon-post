@@ -1,0 +1,22 @@
+title: Post
+@extends:
+    type: article
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        header.post:
+          type: tab
+          title: ✴ Post
+          icon: folder
+          text: Enter details for this Post
+
+          fields:
+
+            .notes:
+              type: textarea
+              label: Notes
+              help: Notes about this Post
+              size: medium

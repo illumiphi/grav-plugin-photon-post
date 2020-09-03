@@ -1,0 +1,13 @@
+{% extends 'article.html.twig' %}
+{% block template %}
+{{ parent() }}
+{% if config.system.debugger.enabled %}
+<!-- user/plugins/photon-post/templates/posts.html.twig -->
+{% endif %}
+{% endblock template %}
+
+{% block body_template_classes %}{{ parent() }} post{% endblock body_template_classes %}
+
+{% block content %}
+  {{ parent() }}
+{% endblock %}
