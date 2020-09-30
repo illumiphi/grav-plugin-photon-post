@@ -1,3 +1,4 @@
+{% import "_macros/collection.html.twig" as collection %}
 {% set showcase = true %}
       <article class="showcase {{ article.template }}" data-url="{{ article.url }}">
 {% include [
@@ -8,12 +9,5 @@
         "_articles/_block/#{ article.template }_main_excerpt.html.twig",
         "_articles/_block/article_main_excerpt.html.twig"
       ] with { 'article': article } %}
-{% include [
-        "_articles/_block/#{ article.template }_collection.html.twig", 
-        "_articles/_block/article_collection.html.twig"
-      ] with { 'article': article } %}
-  {# {% include [ #}
-        {# "_articles/_block/#{ article.template }_footer.html.twig", #}
-        {# "_articles/_block/article_footer.html.twig" #}
-      {# ] with { 'article': article } %} #}
+{{  collection.render(article, 'recent')  }}
       </article>
