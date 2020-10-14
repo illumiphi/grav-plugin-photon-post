@@ -1,4 +1,6 @@
 PHOTON:
+  posts:
+    _label: Details
   post:
     _label: Post Details
     # name: Name
