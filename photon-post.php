@@ -74,8 +74,6 @@ class PhotonPostPlugin extends Plugin
     {
       // setup
       $page = 			$this->grav['page'];
-      $pages = 			$this->grav['pages'];
-      $twig = 			$this->grav['twig'];
       $assets = 		$this->grav['assets'];
 
       // styles
@@ -85,10 +83,18 @@ class PhotonPostPlugin extends Plugin
       // only load the vars if this datatype page
       if ($page->template() == 'post')
       {
+        $options = [
+            'priority' => 100,
+            'position' => 'pipeline',
+            'loading' => 'defer',
+            'group' => 'photon-plugin'
+          ];
+
 
         // scripts
         $js = 'plugin://photon-post/assets/post.js';
         $assets->addJs($js, 100, true, 'defer', 'photon-plugins' );
+        // $assets->addJs( $js, $options );
       }
     }
 }
