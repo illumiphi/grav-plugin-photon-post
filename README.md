@@ -5,7 +5,7 @@
 
 # photon ✴ Post
 
-## v0.1.0
+## 0.1.0
 
 ---
 
@@ -29,7 +29,7 @@ Before configuring this plugin, you should copy the `user/plugins/photon-post/ph
 
 Here is the default configuration and an explanation of available options:
 
-```
+```yaml
 enabled: true
 
 ```
