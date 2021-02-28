@@ -12,11 +12,10 @@ content:
     title: ${collection_name}
     items: '@self.children'
 taxonomy:
+    photon:
     category: 
-        - ${category}
+        - post
     tag: 
-        - ${tag}
-show_gallery: true
 ---
 
 ${summary}
